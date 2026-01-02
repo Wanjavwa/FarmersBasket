@@ -1,6 +1,6 @@
 # FarmersBasket
 
-A modern web application for connecting local farmers with consumers, built with Node.js and Express.
+Farmers Basket is a digital platform designed to connect local farmers directly with consumers. Through the website, farmers can post upcoming events, list products in a shared marketplace, and respond to community demand. Consumers can browse available goods, RSVP to local farming events, and request specific produce through the “Request Produce” feature. By reducing reliance on traditional retail channels, Farmers Basket helps support small-scale farmers while giving consumers easier access to fresh, locally sourced food.
 
 ## Features
 
