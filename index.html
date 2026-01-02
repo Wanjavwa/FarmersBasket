@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FarmersBasket</title>
+
+    <link rel="stylesheet" href="styles.css?v=12" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Inline styles for required elements -->
+   
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#marketplace">Marketplace</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#request">Request Produce</a></li>
+    <li><a href="#vendors">Vendors</a></li>
+    <li><button id="theme-button">Dark Mode</button></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>FarmersBasket</h1>
+        <h3>Your bridge to fresh, local produce from dedicated farmers in your community at a low cost.</h3>
+        <button id="shopNow">Shop Now</button>
+    </div>
+</section>
+
+<!-- About the Event Section -->
+<section class="section" id="about">
+    <h2>About the Event</h2>
+    <p>FarmersBasket is a local initiative that brings farmers and consumers together.</p>
+    <p>On here farmers can sell their produce directly to the consumer at favorable prices without major retail interferance.</p>
+    <p>This helps to empower famers, lower the cost of produce for consumers and helps to reduce food waste. FarmersBasket welcomes you!</p>
+</section>
+
+<!-- Marketplace -->
+<section class="section" id="marketplace">
+    <h2>Marketplace</h2>
+    <p>Explore locally grown produce from trusted farms.</p>
+    <div class="cards">
+        <div class="card">
+            <img src="templates/tomatoes.jpg" alt="Green Valley Farms" />
+            <div class="card-content">
+                <h3>Organic Tomatoes</h3>
+                 <h4>GreenValley Farm</h4>
+                 <p>$3</p>
+                <span class="badge">Add to Cart</span>
+            </div>
+        </div>
+        <div class="card">
+            <img src="templates/potatoes.jpg" />
+            <div class="card-content">
+                <h3>Hearty Potatoes</h3>
+                <h4>RoseWell Farm</h4>
+                 <p>$5</p>
+                <span class="badge">Add to Cart</span>
+            </div>
+        </div>
+        <div class="card">
+            <img src="templates/groundbeef.jpg" />
+            <div class="card-content">
+                <h3>Ground Beef</h3>
+                <h4>N'gombe Farm</h4>
+                 <p>$8</p>
+                <span class="badge">Add to Cart</span>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="marketplace.html" style="display: inline-block; padding: 10px 20px; background: #ff7e5f; color: white; text-decoration: none; border-radius: 4px;">Shop Our Marketplace</a>
+    </div>
+</section>
+
+<section class="section events" id="events">
+    <h2>Upcoming Events</h2>
+    <p>Join our vibrant community at local farmers markets and festivals.</p>
+
+    <div class="event-card" data-event="Green Market Festival">
+        <h4>Fruits of America</h4>
+        <small>Saturday, August 12th, Lincoln ParishPark</small>
+        <p>Meet local farmers, enjoy fruit stalls, live music and more!</p>
+
+        <!-- RSVP form for this event -->
+        <form class="event-rsvp-form" title="rsvp-form">
+          <label for="name-gmf">Name:</label><br />
+          <input type="text" id="name-gmf" name="name" required /><br />
+
+          <label for="state-gmf">Home:</label><br />
+          <input type="text" id="state-gmf" name="state" required /><br />
+
+          <label for="email-gmf">Email:</label><br />
+          <input type="email" id="email-gmf" name="email" required /><br />
+
+          <button type="submit" class="rsvp-button">Submit RSVP</button>
+        </form>
+    </div>
+
+    <div class="event-card" data-event="Farmers Meetup">
+        <h4>Locals Farmers Club Meetup</h4>
+        <small>Friday, August 18th, Grambling Community Center</small>
+        <p>Network with growers and learn about sustainable farming practices.</p>
+
+        <!-- RSVP form for this event -->
+        <form class="event-rsvp-form" title="rsvp-form">
+          <label for="name-fm">Name:</label><br />
+          <input type="text" id="name-fm" name="name" required /><br />
+
+          <label for="state-fm">Home:</label><br />
+          <input type="text" id="state-fm" name="state" required /><br />
+
+          <label for="email-fm">Email:</label><br />
+          <input type="email" id="email-fm" name="email" required /><br />
+
+          <button type="submit" class="rsvp-button">Submit RSVP</button>
+        </form>
+    </div>
+</section>
+
+<p id="rsvp-count">⭐ 3 people have RSVP'd to this event!</p>
+<div class="rsvp-participants">
+
+  <h3>Who's Attending?</h3>
+  <p>🎟️ Prevailer from Jewwethall has RSVP'd for Green Market Festival.</p>
+  <p>🎟️ Favor from Robinson has RSVP'd for Farmers Meetup.</p>
+  <p>🎟️ Imran from Texas has RSVP'd for Green Market Festival.</p>
+</div>
+
+
+<!-- Request Produce Section -->
+<section class="section" id="request">
+    <h2>Request Produce</h2>
+    <p>Need something specific? Submit your request directly to nearby farmers.</p>
+    <form id="request-form">
+        <label for="produce">Produce:</label><br />
+        <input type="text" id="produce" name="produce" required /><br />
+        <label for="quantity">Quantity:</label><br />
+        <input type="number" id="quantity" name="quantity" required /><br />
+        <label for="notes">Notes:</label><br />
+        <textarea id="notes" name="notes"></textarea><br />
+        <button type="submit">Submit Request</button>
+    </form>
+    <div id="requests-list">
+        <h3>Recent Requests</h3>
+        <div id="requests-container"></div>
+    </div>
+</section>
+
+<!-- Vendors Section -->
+<section class="section" id="vendors">
+    <h2>Our Trusted Vendors</h2>
+    <p>Meet the amazing farmers and vendors behind FarmersBasket.</p>
+    <div class="cards">
+        <div class="card">
+            <img src="templates/happycows.jpg" />
+            <div class="card-content">
+                <h3>N'gombe Farms</h3>
+                <span class="badge">Certified Organic</span>
+            </div>
+        </div>
+        <div class="card">
+            <img src="templates/orgnic.jpg" />
+            <div class="card-content">
+                <h3>RoseWell Farms</h3>
+                <span class="badge">Local Favorite</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2025 FarmersBasket. All rights reserved.</p>
+</footer>
+<!-- Modal -->
+<div id="success-modal" class="modal">
+  <div class="modal-container">
+    <p id="modal-text">Thanks for RSVPing!</p>
+    <img id="modal-image" src="templates/registered.png" width="150" />
+  </div>
+</div>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>

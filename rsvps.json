@@ -1,0 +1,20 @@
+{
+  "rsvps": [
+    {
+      "name": "Prevailer",
+      "state": "Jewwethall",
+      "event": "Green Market Festival"
+    },
+    {
+      "name": "Favor",
+      "state": "Robinson",
+      "event": "Farmers Meetup"
+    },
+    {
+      "name": "Imran",
+      "state": "Texas",
+      "event": "Green Market Festival"
+    }
+  ],
+  "count": 3
+}
